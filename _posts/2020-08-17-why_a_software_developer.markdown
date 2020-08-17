@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Why a Software Developer"
-date:       2020-08-17 17:45:52 +0000
+title:      "Why a Software Developer?"
+date:       2020-08-17 13:45:53 -0400
 permalink:  why_a_software_developer
 ---
 
