@@ -61,7 +61,6 @@ class AuthController < ApplicationController
             render json: {message: 'No currently logged in user'}
         end
     end
-
 end
 ```
 
@@ -86,7 +85,8 @@ This is where it starts to get a little bit tricky.  We need to add methods into
 
 The methods used here are chained together to verify whether someone is logged in or needs to be logged in.  Here's a quick look at my entire controller:
 
-``` class ApplicationController < ActionController::API
+ ```
+class ApplicationController < ActionController::API
     before_action :require_login
 
     def logged_in?
@@ -121,7 +121,8 @@ The methods used here are chained together to verify whether someone is logged i
             nil
         end
     end
-end ```
+end
+```
 
 First we can start with our 'logged_in?' method.  It is checking the result of our 'session_user' method down at the bottom of our code.  It simply returns true or false.
 
@@ -141,7 +142,8 @@ The above steps work for an existing user because the credentials have been auth
 
 Our scaffold command should have the CREATE method ready to go for us, but we'll modify it to look like the following:
 
-```def create
+```
+ def create
     @user = User.new(user_params)
 
     if @user.save
@@ -151,7 +153,8 @@ Our scaffold command should have the CREATE method ready to go for us, but we'll
     else
       render json: @user.errors, status: :unprocessable_entity
     end
-  end```
+  end
+```
 	
 
  This just makes sure a token is sent back as part of the response when a new user is created.
