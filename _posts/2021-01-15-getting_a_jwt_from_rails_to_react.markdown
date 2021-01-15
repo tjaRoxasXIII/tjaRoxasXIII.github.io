@@ -165,6 +165,5 @@ The last thing you'll need to do is just make sure you've added the proper routi
 ```
 post '/login', to: 'auth#login'
 get '/auto_login', to: 'auth#auto_login'
-	```
-	
+```
 And that should be pretty much everything you need in order to generate and present your JWT tokens to your front-end application from your Rails back-end.  There are plenty of guides and best-practices for how to store and handle them out there, but once you've set up your fetch requests on the frontend, you should be able to log the responses and view the data coming through!  
